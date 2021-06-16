@@ -1,0 +1,461 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+}
+html{
+  -webkit-text-size-adjust: 100%;
+}
+
+#copyMessage{
+  position: absolute;
+  display: none;
+  opacity: 0;
+  z-index: 1000;
+  background-color: #000000;
+  padding: 7.5px;
+  font-size: 15px;
+  border-radius: 100% 100% 100% 0%;
+}
+
+
+#boxprojects{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+
+#boxhome {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+}
+
+#boxabout {
+position: relative;
+width: 100%;
+min-height: 100vh;
+min-height: calc(var(--vh, 1vh) * 100);
+}
+
+#boxskills {
+position: relative;
+width: 100%;
+min-height: 100vh;
+min-height: calc(var(--vh, 1vh) * 100);
+}
+
+#welcome {
+  font-family: sans-serif;
+  position: relative;
+  font-size: 9vmin;
+  visibility: hidden;
+}
+
+#abouttext {
+  margin: 1% 0% 10% 0%;
+}
+
+#boxcontact{
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 1px 0% 10vh 0%;
+  padding: 1px 0% calc(var(--vh, 1vh) * 10) 0%;
+  clear: both;
+  position: relative;
+}
+
+.section{
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 1px 0px 0px 0px;
+}
+
+.sectiontitle{
+  margin: 10% 0% 5% 0%;
+  font-size: 52.5px;
+  font-weight: bold;
+}
+
+.wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0% 10%;
+}
+
+.verticalwrapper {
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  max-height: 70%;
+  transform: translate(0, 21.25%);
+}
+
+.centeredtext {
+text-align: center;
+position: relative;
+top: 50%;
+transform: translate(0, -50%);
+}
+
+.sectiontext{
+  font-size: 22.5px;
+}
+
+
+body{
+  background-color: rgb(0, 0, 0);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button, .activebutton{
+  font-size: 26.25px;
+  color: rgb(245, 240, 255);
+  padding: 0px 19.6875px 0px 19.6875px;
+    font-weight: bold;
+    transform: scale(1.0);
+    line-height: 49.875px;
+    border-radius: 24.9375px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+    -webkit-transition: color 100ms linear, transform 100ms linear, box-shadow 100ms linear, box-shadow 100ms linear, background-color linear 100ms;
+    background-color: rgba(32,33,36,0.8);
+    cursor: pointer;
+
+      user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+}
+
+.button:hover, .activebutton{
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255,0.3);
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.4);
+  -webkit-transition: color 100ms linear, transform 100ms linear, box-shadow 100ms linear, box-shadow 100ms linear, background-color linear 100ms;
+  background-color: rgb(65, 95, 219);
+}
+.button:active, .activebutton:active{
+  background-color: rgb(125, 155, 255);
+}
+#background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.projectlist{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  line-height: 120px;
+}
+
+.projectlistitem{
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 75%;
+  text-align: left;
+  float: none;
+  display: inline-block;
+  line-height: normal;
+  font-size: 15px;
+}
+
+.projectitem{
+  border-radius: 2vh;
+  border-radius: calc(var(--vh, 1vh) * 2);
+  overflow: hidden;
+  width: 300px;
+  height: 375px;
+  max-width: 100%;
+  background-color: rgba(32,33,36,0.9);
+  transform: scale(1.0);
+  -webkit-transition: transform 100ms linear, background-color 100ms linear;
+  cursor: pointer;
+
+  border-width: 0.5vh;
+  border-width: calc(var(--vh, 1vh) * 0.5);
+  border-style: solid;
+  border-color: rgb(22,24,28);
+
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.projectitem:hover{
+  transform: scale(1.1);
+  background-color: rgba(52,54,58,1);
+  border-color: rgb(42,44,48);
+}
+.projectitem:active{
+  background-color: rgba(72,74,78,0.9);
+}
+
+.projpic{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projectname{
+  z-index: 10;
+  padding: 0px 16px 0px 16px;
+  top: 50%;
+  transform: translateY(-100%);
+  line-height: 37.5px;
+  background-color: rgba(32,33,36,0.8);
+  position: absolute;
+  font-size: 18.75px;
+  border-radius: 0px 22.5px 0px 0px;
+  font-weight: bold;
+}
+
+.projectdesc{
+  padding: 8px 16px 8px 16px;
+  width: 90%;
+  height: 100%;
+  max-height: 40%;
+  overflow: auto;
+}
+
+.projectlink{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.contactitem{
+  max-width: 80vw;
+  cursor: pointer;
+  background: rgba(32,33,36,0.8);
+  border-radius: 40px;
+  -webkit-transition: color 100ms linear, transform 100ms linear, background-color linear 100ms;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  display: inline-block;
+  max-height: 80px;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.contactitem:hover{
+  background: rgba(52,54,58,0.8);
+}
+.contactitem:active{
+  background: rgba(72,74,78,0.8);
+}
+
+.contpic{
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+.conttext{
+  line-height: 80px;
+  text-align: left;
+  font-size: 22.5px;
+  background: none;
+  border: none;
+  pointer-events: none;
+  overflow: visible;
+  display: inline-block;
+  vertical-align:top;
+}
+.conttext:focus{
+  outline: none;
+  border: none;
+}
+.contactlistitem{
+  margin: 0px 0px 3vh 0px;
+  margin: 0px 0px  calc(var(--vh, 1vh) * 3) 0px;
+}
+
+.contpicbg{
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  background: rgba(32,33,36,0.8);
+    border-radius: 40px;
+    display: inline-block;
+}
+
+
+
+.cpypic{
+  height: 30px;
+  align-self: flex-end;
+  margin: 0px;
+  padding: 25px;
+  display: inline-block;
+}
+
+h1{
+  text-align: center;
+}
+nav{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1000;
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+}
+
+li{
+    list-style: none;
+}
+.navitem {
+  margin-left: 22.5px;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  float: left;
+}
+#navmenuopener{
+  display: none;
+  margin-top: 0px;
+}
+
+#navmenuopenerbutton{
+  border-radius: 0px;
+  background: rgba(32,33,36,0.6);
+}
+#navmenuopenerbutton:hover{
+  background: rgba(52,54,58,0.6);
+}
+#navmenuopenerbutton:active{
+  background: rgba(72,74,78,0.6);
+}
+
+@media (max-width:925px), (orientation: portrait) {
+  nav{
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1000;
+  }
+  .navlist{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  .navitem{
+    margin-left: 0px;
+    display: inline-grid;
+    float: none;
+    text-align: center;
+    min-width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #navitems{
+    display: none;
+  }
+  #navmenuopener{
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width:600px) and (orientation: portrait) {
+  .button, .activebutton{
+    font-size: 52.5px;
+    padding: 0px 39.375px 0px 39.375px;
+    line-height: 99.75px;
+    border-radius: 49.875px;
+  }
+  .navitem{
+  }
+  .sectiontext{
+    font-size: 33.75px;
+  }
+  .sectiontitle{
+    font-size: 78.75px;
+  }
+  nav{
+      padding-bottom: 0px;
+  }
+
+  .contactitem{
+    border-radius: 60px;
+    max-height: 120px;
+  }
+  .contpic{
+    padding: 15px;
+    height: 90px;
+    width: 90px;
+  }
+  .conttext{
+    line-height: 120px;
+    font-size: 33.75px;
+  }
+  .contpicbg{
+    height: 120px;
+    width: 120px;
+      border-radius: 60px;
+  }
+  .cpypic{
+    height: 45px;
+    padding: 37.5px;
+  }
+  #navitems{
+    display: none;
+  }
+  #navmenuopener{
+    display: block;
+  }
+
+  .projectitem{
+    width: 450px;
+    height: 562.5px;
+  }
+
+
+}
+
+li:hover {
+
+}
+
+::-webkit-scrollbar {
+  width: 2.5vmin;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 95, 219,0.5);
+      border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(65, 95, 219);
+}

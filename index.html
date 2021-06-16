@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Peter's site</title>
+    <link rel="icon" href="img/favicon.ico"><!--icon made with Magneto font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <canvas id="background"></canvas>
+    <script src="js/pixi.min.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/css_hax.js"></script>
+<nav>
+  <script src="js/nav.js"></script>
+    <ul class="navlist" id="navitems">
+      <li class="navitem"><p><div class="button" id="navbuttonhome" onclick="scrollToElement('boxhome')">Home</div></p></li>
+      <li class="navitem"><p><div class="button" id="navbuttonabout" onclick="scrollToElement('boxabout')">About Me</div></p></li>
+      <li class="navitem"><p><div class="button" id="navbuttonskills" onclick="scrollToElement('boxskills')">My Skills</div></p></li>
+      <li class="navitem"><p><div class="button" id="navbuttonprojects" onclick="scrollToElement('boxprojects')">Projects</div></p></li>
+      <li class="navitem"><p><div class="button" id="navbuttoncontact" onclick="scrollToElement('boxcontact')">Contact</div></p></li>
+    </ul>
+    <ul class="navlist" id="navmenuopener">
+      <li><p><div class="button" id="navmenuopenerbutton" onclick="toggleNavMenu()">Menu</div></p></li>
+    </ul>
+</nav>
+
+
+<p id="copyMessage">Copied!</p>
+<script src="js/copy_notify.js"></script>
+<div class="wrapper">
+
+
+
+<div id="boxhome" class="section">
+  <div class="verticalwrapper">
+    <div class="centeredtext">
+      <div id="welcome">
+        <p id="welcometxt">Hi! Welcome!<br><br>I'm Peter :)</p>
+      </div>
+      <script src="js/welcome.js"></script>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="boxabout" class="section">
+      <div class="sectiontitle">
+      About me
+      </div>
+      <div class="sectiontext">
+        <div id="abouttext">
+        I'm Péter Panyik, a <script src="js/myage.js"></script> year old undergraduate student,<br>
+        currently studying Computer Science Engineering, at John von Neumann University in Hungary.
+        <br>
+        <br>
+        Bedsides IT, I also know a bit of electronics, since I studied it as a subject in High School, and sometimes I build circuits for Arduino, along with a bit of C++ coding.
+        <br>
+        <br>
+        I have a passion for programming and game development, I started programming at the age of 13.
+        I remember looking up tutorials to create games, first in OpenGL,
+        and after realizing the difficulties of writing a game engine from scratch, I quickly moved to the Unity game engine.
+        <br>
+        <br>
+        My motivation came from popular sandbox games, such as Garry's Mod, Minecraft, Terraria. I love to create things, and game development had a promise of this creative freedom.
+        <br>
+        <br>
+        So I started learning JavaScript, and later switched to C#, since it was more popular among Unity users.
+        </div>
+      </div>
+</div>
+
+
+<div id="boxskills" class="section">
+      <div class="sectiontitle">
+      My Skills
+      </div>
+
+</div>
+
+<div id="boxprojects" class="section">
+
+
+  <div class="sectiontitle">
+  Projects
+  </div>
+
+
+  <ul class="projectlist" id="projectlisting">
+    <script src="js/projects.js"></script>
+  </ul>
+</div>
+
+
+<div id="boxcontact" class="section">
+  <script src="js/contacts.js"></script>
+  <div class="sectiontitle">
+  Contact Me
+  </div>
+
+<ul class="contacts">
+
+  <li class="contactlistitem">
+    <div class="contactitem" onclick="clickContact('copy','contactEmail')">
+      <div class="contpicbg">
+        <img src="img/mail.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactEmail"
+        value=
+        "panyikpeti226@gmail.com"
+        >
+      </input>
+        <img src="img/cpy.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+  <li class="contactlistitem">
+    <div class="contactitem" onclick="clickContact('copy','contactPhone')">
+      <div class="contpicbg">
+        <img src="img/phone.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactPhone"
+        value=
+        "+36 20 622 8586"
+        >
+      </input>
+        <img src="img/cpy.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+  <li class="contactlistitem">
+    <div class="contactitem" onclick="clickContact('copy','contactDiscord')">
+      <div class="contpicbg">
+        <img src="img/dc.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactDiscord"
+        value=
+        "Peter226#8439"
+        >
+      </input>
+      <img src="img/cpy.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+  <li class="contactlistitem">
+    <div class="contactitem" onclick="clickContact('link','contactGithub')">
+      <div class="contpicbg">
+        <img src="img/github.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactGithub"
+        value=
+        "github.com/Peter226"
+        >
+      </input>
+      <img src="img/newtab.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+
+</ul>
+</div>
+
+</div>
+  </body>
+</html>
