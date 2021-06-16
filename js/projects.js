@@ -39,9 +39,11 @@ function loadProject(projectName){
   xmlhttp.send();
 }
 
-loadProject("a");
-loadProject("b");
-loadProject("c");
+
+loadProject("fps");
+loadProject("voxel");
+loadProject("paradise");
+loadProject("survival");
 /*function findProjects(){
 
   var xmlhttp = new XMLHttpRequest();
