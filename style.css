@@ -112,6 +112,41 @@ a {
   background-color: rgba(32,33,36,0.8);
   padding: 16px;
   margin: 32px 0px 32px 0px;
+  color: rgb(210,208,206);
+}
+
+/*Skills section*/
+.skillscontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.skillcontainer{
+  border-radius: 22.5px;
+  background-color: rgba(32,33,36,0.8);
+  margin: 16px 16px 16px 16px;
+  display: inline;
+  flex-grow: 1;
+  display: flex;
+  align-items: : flex-start;
+}
+.skillicon{
+  filter: invert(100%);
+  width: 80px;
+  height: 80px;
+  padding: 16px;
+}
+.skilltitle{
+  font-size: 26px;
+  padding: 16px 16px 0px 0px;
+}
+.skilldesc{
+  padding: 0px 16px 16px 0px;
+  color: rgb(210,208,206);
+}
+.skilltext{
+
 }
 
 .button, .activebutton{
@@ -227,6 +262,7 @@ a {
   height: 100%;
   max-height: 40%;
   overflow: auto;
+  color: rgb(210,208,206);
 }
 
 .projectlink{
