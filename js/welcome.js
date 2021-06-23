@@ -18,21 +18,21 @@ var s = document.getElementById("welcometxt").innerHTML;
 document.getElementById("welcometxt").innerHTML = '_';
 document.getElementById("welcometxt").style.visibility = "visible";
 
-await sleep(2500);
+await sleep(1000);
 for(var wchar = 1;wchar <= s.length;wchar++){
   if(s.charAt(wchar - 2) == '!'){
     writinw = false;
-    await sleep(1500);
+    await sleep(1000);
   }
   if(s.charAt(wchar) == ':'){
     writinw = false;
-    await sleep(2000);
+    await sleep(1250);
   }
   writinw = true;
   if(s.charAt(wchar - 1) != '<'){
   document.getElementById("welcometxt").innerHTML = s.substring(0,wchar) + '_';
   }
-  await sleep(Math.random() * 100 + 50);
+  await sleep(Math.random() * 60 + 50);
 }
 writinw = false;
 
