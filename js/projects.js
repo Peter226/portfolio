@@ -43,7 +43,9 @@ function loadProject(projectName){
 loadProject("fps");
 loadProject("voxel");
 loadProject("paradise");
+loadProject("gameoflife");
 loadProject("survival");
+
 /*function findProjects(){
 
   var xmlhttp = new XMLHttpRequest();

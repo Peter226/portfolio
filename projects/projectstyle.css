@@ -1,0 +1,41 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+}
+body{
+  background-color: rgb(0,0,0);
+}
+h1{
+  color: rgb(255,255,255);
+  font-size: 52.5px;
+  font-weight: bold;
+}
+.wrapper{
+  padding: 0px 100px 0px 100px;
+}
+.section{
+  padding: 40px 0px 40px 0px;
+}
+.sectiontext{
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(22,23,26,0.8);
+  margin: 32px 0px 32px 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(65, 95, 219);
+  text-align: left;
+  display: block;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+p{
+  margin: 10px;
+    color: rgb(206,208,210);
+}

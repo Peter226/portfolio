@@ -1,0 +1,6 @@
+{
+"title":"GPU Game Of Life",
+"thumb":"projects/gameoflife/preview.png",
+"desc":"Conway's Game of Life simulated on the GPU. It was written in hlsl as a compute shader, and it is made to be interactable. The simulation's UI is created using Unity's UI Toolkit.",
+"url":"projects/gameoflife/page.html"
+}
