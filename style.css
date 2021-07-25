@@ -70,7 +70,7 @@ a {
   padding: 1px 0px 0px 0px;
 }
 .sectiontitle{
-  margin: 120px 0px 25px 0px;
+  margin: 80px 0px 25px 0px;
   font-size: 52.5px;
   font-weight: bold;
 }
@@ -145,14 +145,17 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  margin: auto;
 }
 .skillcontainer{
   width: 500px;
+  max-width: 70vw;
   border-radius: 10px;
   background-color: rgba(22,23,26,0.8);
   margin: 16px 16px 16px 16px;
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
 }
 .skillicon{
   width: 56px;
@@ -315,7 +318,7 @@ a {
   max-height: 80px;
   white-space:nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .contactitem:hover{
   background: rgba(52,54,58,0.8);
@@ -460,7 +463,11 @@ li{
     margin-top: 0px;
     margin-bottom: 0px;
   }
+  .sectiontitle{
+    margin: 120px 0px 25px 0px;
+  }
 }
+
 @media (min-width:600px) and (orientation: portrait) {
   .button, .activebutton{
     font-size: 52.5px;
@@ -474,6 +481,7 @@ li{
     font-size: 33.75px;
   }
   .sectiontitle{
+    margin: 120px 0px 25px 0px;
     font-size: 78.75px;
   }
   nav{

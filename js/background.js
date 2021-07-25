@@ -65,16 +65,11 @@ const geometry = new PIXI.Geometry()
 
 
 
-    let renderTexture = PIXI.RenderTexture.create(window.innerWidth, window.innerHeight);
-    let sprite = PIXI.Sprite.from("img/Brush.png");
-    sprite.anchor.set(0.5);
-
 
     const uniforms = {
         time: 0.5,
         yaspect : 0.0,
-        mouse: new PIXI.Point(),
-        uSampler2: renderTexture
+        mouse: new PIXI.Point()
     };
 
 const shader = PIXI.Shader.from(backgroundShaderVert, backgroundShaderFrag, uniforms);
@@ -100,14 +95,10 @@ app.ticker.add(function(delta){
   i++;
   let xmous = app.renderer.plugins.interaction.mouse.global.x;
   let ymous = app.renderer.plugins.interaction.mouse.global.y;
-  sprite.position.x = (xmous) - window.innerWidth * 0.0;
-  sprite.position.y = (-ymous) + window.innerHeight * 1.0;
   let xdiff = xmous - xlast;
   let ydiff = ymous - ylast;
   let scale = Math.sqrt(xdiff * xdiff + ydiff * ydiff);
   scale = Math.min(50.0,scale);
-  sprite.scale.x = window.innerWidth * 0.0005;
-  sprite.scale.y = window.innerWidth * 0.0005;
   xlast = xmous;
   ylast = ymous;
 //  app.renderer.render(sprite, renderTexture, false);

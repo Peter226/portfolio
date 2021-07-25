@@ -12,8 +12,14 @@ window.addEventListener('resize', () => {
 navMenuVisible = false;
 if(window.innerHeight < window.innerWidth && window.innerWidth > 925){
     navMenu.style.display = "block";
+    if(portraitMode){
+      loadMasonry();
+    }
     portraitMode = false;
 }else{
+  if(!portraitMode){
+    loadMasonry();
+  }
   portraitMode = true;
   if(navMenuVisible){
     navMenu.style.display = "block";
