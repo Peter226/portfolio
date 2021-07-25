@@ -24,9 +24,9 @@
       <li class="navitem"><p><div class="button" id="navbuttonprojects" onclick="scrollToElement('boxprojects')">Projects</div></p></li>
       <li class="navitem"><p><div class="button" id="navbuttoncontact" onclick="scrollToElement('boxcontact')">Contact</div></p></li>
     </ul>
-    <ul class="navlist" id="navmenuopener">
-      <li><p><div class="button" id="navmenuopenerbutton" onclick="toggleNavMenu()">Menu</div></p></li>
-    </ul>
+    <div id="navmenuopener">
+      <div id="navmenuopenerbutton" onclick="toggleNavMenu()"><img src="img/menu.svg" class="navmenupic"></div>
+    </div>
 </nav>
 
 
@@ -57,6 +57,7 @@
       <div class="sectiontext">
         <div id="abouttext">
           <div class="abouttextcontainer">
+            <img src="img/peter_p.jpg" class="portfoliopic"></img>
         I'm Péter Panyik, a <script src="js/myage.js"></script> year old undergraduate student,
         currently studying Computer Science Engineering, at John von Neumann University in Hungary.
         <br>
@@ -76,8 +77,6 @@
           <br>
         Bedsides IT, I also know a bit of electronics, since I studied it as a subject in High School, and sometimes I build circuits for Arduino, along with a bit of C++ coding.
         </div>
-        <div class="aboutsidebar"></div>
-          <img src="img/fresh.jpg" class="portfoliopic"></img>
         </div>
       </div>
 </div>
@@ -89,26 +88,21 @@
 
       <div class="skillscontainer">
       <div class="skillcontainer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Video_game_controller_icon_designed_by_Maico_Amorim.svg/1249px-Video_game_controller_icon_designed_by_Maico_Amorim.svg.png" class="skillicon"></img>
+        <img src="img/skills/controller.svg" class="skillicon"></img>
         <div class="skilltext">
           <div class="skilltitle">Gameplay Programming</div>
           <div class="skilldesc">
-            -Most skilled in C# and Unity<br>
-            -I can:<br>
-            &nbsp ·Create smaller scale systems<br>
-            &nbsp ·Write optimized code<br>
-            &nbsp ·Burst-compileable code<br>
-            -I love to create:<br>
-            &nbsp ·Interactive mechanics<br>
-            &nbsp ·Procedural content<br>
-            -Currently learning:<br>
-            &nbsp ·Unity's ECS & DOTS<br>
-            &nbsp ·Networking
+            -C# and Unity<br>
+            -Game systems<br>
+            -Optimized code<br>
+            -Burst-compiled code<br>
+            -Procedural content<br>
+            -Interactive mechanics<br>
           </div>
         </div>
       </div>
       <div class="skillcontainer">
-          <img src="http://cdn.onlinewebfonts.com/svg/img_571170.png" class="skillicon"></img>
+          <img src="img/skills/processor.svg" class="skillicon"></img>
           <div class="skilltext">
             <div class="skilltitle">General Programming</div>
             <div class="skilldesc">
@@ -126,7 +120,7 @@
           </div>
       </div>
       <div class="skillcontainer">
-          <img src="https://image.flaticon.com/icons/png/512/1792/1792311.png" class="skillicon"></img>
+          <img src="img/skills/explosion.svg" class="skillicon"></img>
           <div class="skilltext">
             <div class="skilltitle">Shader Programming & VFX</div>
             <div class="skilldesc">
@@ -142,7 +136,7 @@
           </div>
       </div>
       <div class="skillcontainer">
-          <img src="https://pic.onlinewebfonts.com/svg/img_356899.png" class="skillicon"></img>
+          <img src="img/skills/database.svg" class="skillicon"></img>
           <div class="skilltext">
             <div class="skilltitle">Databases</div>
             <div class="skilldesc">
@@ -161,7 +155,7 @@
           </div>
       </div>
       <div class="skillcontainer">
-          <img src="https://www.svgrepo.com/show/28224/programming.svg" class="skillicon"></img>
+          <img src="img/skills/webprog.svg" class="skillicon"></img>
           <div class="skilltext">
             <div class="skilltitle">Websites</div>
             <div class="skilldesc">
@@ -186,6 +180,13 @@
 
   <ul class="projectlist" id="projectlisting">
     <script src="js/projects.js"></script>
+
+    <!--script>loadProject("fps");</script-->
+    <script>loadProject("voxel");</script>
+    <script>loadProject("paradise");</script>
+    <script>loadProject("gameoflife");</script>
+    <script>loadProject("survival");</script>
+
   </ul>
 </div>
 

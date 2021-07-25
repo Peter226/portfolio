@@ -1,6 +1,12 @@
+//project load queue
+var projectQueue = [];
+var loadingProject = false;
+
 
 //load a project dynamically and append to the list
 function loadProject(projectName){
+  if(!loadingProject){
+  loadingProject = true;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -30,40 +36,17 @@ function loadProject(projectName){
       projectItem.appendChild(projectDesc);
       projectDesc.className = "projectdesc";
       projectDesc.innerHTML = project.desc;
-
-
-
+    }
+    loadingProject = false;
+    if(projectQueue.length > 0){
+      var nextProject = projectQueue[0];
+      projectQueue.shift();
+      loadProject(nextProject);
     }
   };
   xmlhttp.open("GET", "projects/"+projectName+"/config.json", true);
   xmlhttp.send();
+  }else{
+    projectQueue.push(projectName);
+  }
 }
-
-
-loadProject("fps");
-loadProject("voxel");
-loadProject("paradise");
-loadProject("gameoflife");
-loadProject("survival");
-
-/*function findProjects(){
-
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      lines = this.responseText.split("\n");
-      var i;
-      for(i = 0;i < lines.length;i++){
-        if(/\S/.test(lines[i])){
-        loadProject(lines[i]);
-        }
-      }
-    }
-  };
-  xmlhttp.open("GET", "projects/project_list.txt", true);
-  xmlhttp.send();
-
-
-
-}*/
-//findProjects();
