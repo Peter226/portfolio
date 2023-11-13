@@ -1,0 +1,135 @@
+#boxprojects{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .projectlist{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    line-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projectlistitem{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 90%;
+    text-align: left;
+    float: none;
+    display: block;
+    line-height: normal;
+    font-size: 15px;
+  }
+  
+  .projectitem{
+    display: flex;
+    flex-direction: row;
+  
+    border-radius: 12.5px;
+    overflow: hidden;
+    height: 400px;
+    max-width: 100%;
+    background-color: rgba(32,33,36,0.9);
+    transform: scale(1.0);
+    -webkit-transition: transform 100ms linear, background-color 100ms linear;
+    cursor: pointer;
+  
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  
+  .projectitem:hover{
+    transform: scale(1.1);
+    background-color: rgba(52,54,58,1);
+  }
+  .projectitem:active{
+    background-color: rgba(72,74,78,0.9);
+  }
+  
+  .projpic{
+    height: 100%;
+    width: 40%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12.5px 12.5px 0px 0px;
+  }
+  
+  .projectname{
+    z-index: 10;
+    padding: 0px 16px 0px 16px;
+    top: 60.1%;
+    transform: translateY(-100%);
+    line-height: 37.5px;
+    background-color: rgba(32,33,36,0.8);
+    position: absolute;
+    font-size: 18.75px;
+    border-radius: 0px 22.5px 0px 0px;
+    font-weight: bold;
+  }
+  
+  .projectdesc{
+    padding: 8px 16px 8px 16px;
+    width: 90%;
+    height: 100%;
+    max-height: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgb(206,208,210);
+    font-size: small;
+  }
+  
+  .projectlink{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+  }
+
+
+@media (min-width:600px) and (orientation: portrait) {
+
+.projectlistitem{
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 90%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    }
+
+
+    .projectitem{
+    border-radius: 45px;
+    width: 800px;
+    height: 1000px;
+    max-width: 100%;
+    }
+
+    .projpic{
+    border-radius: 45px 45px 0px 0px;
+        height: 64%;
+    }
+
+    .projectname{
+    padding: 0px 32px 0px 32px;
+    line-height: 75px;
+    font-size: 37.5px;
+    border-radius: 0px 45px 0px 0px;
+    top: 64%;
+    }
+
+    .projectdesc{
+    padding: 16px 32px 16px 32px;
+    font-size: 32px;
+    }
+
+}

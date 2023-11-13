@@ -1,0 +1,48 @@
+.portrait-container{
+    width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-portrait{
+    width: 300px;
+}
+
+/*Welcome message*/
+#welcome {
+    font-family: sans-serif;
+    position: relative;
+    font-size: 9vmin;
+    visibility: hidden;
+
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (max-width:800px) or (max-height:500px) {
+
+    #welcome {
+        font-size: 6vmin;
+    }
+
+    .portrait-container{
+        width: 300px;
+    }
+    .home-portrait{
+        width: 200px;
+    }
+}
+
+@media (max-width:600px) and (orientation: portrait) {
+    .portrait-container{
+        display: none;
+    }
+
+    #welcome {
+        font-size: 8vmin;
+    }
+}

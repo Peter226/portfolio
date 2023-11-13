@@ -6,7 +6,11 @@
     <link rel="icon" href="img/favicon.ico"><!--icon made with Magneto font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/copyright.css">
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
@@ -37,15 +41,24 @@
 
 
 
-<div id="boxhome" class="section">
+<div id="boxhome" classList="section">
+  <div class="flex-row">
+  <div class="portrait-container">
+    <div class="portrait-aligner">
+      <div>
+        <img src="img/brickwall_low.png" class="home-portrait"></img>
+  </div>
+</div>
+  </div>
   <div class="verticalwrapper">
     <div class="centeredtext">
       <div id="welcome">
-        <p id="welcometxt">Hi! Welcome!<br><br>I'm Peter :)</p>
+        <p id="welcometxt">Hi! Welcome!<br><br>I'm Péter 😄</p>
       </div>
       <script src="js/welcome.js"></script>
     </div>
   </div>
+</div>
 </div>
 
 
@@ -59,14 +72,14 @@
         <div id="abouttext">
           <div class="abouttextcontainer">
             <img src="img/peter_p.png" class="portfoliopic"></img>
-        I'm Péter Panyik, a <script src="js/myage.js"></script> year old undergraduate student,
-        currently studying Computer Science Engineering, at John von Neumann University in Hungary.
+        I'm Péter Panyik, a <script src="js/myage.js"></script> year old Computer Science Engineer,
+        graduated at John von Neumann University in 2023, currently working freelance as a game developer and generalist programmer.
         <br>
         <br>
-        Right now I'm a hobbyist programmer, who's mainly interested in gameplay programming (mostly C#), shader programming and vfx.
+        I'm mainly interested in gameplay programming, shader programming, vfx and general-purpose .Net / C# programming.
           <br>
           <br>
-        My current studies include: general programming in C# (using .Net), Java and C++; creating desktop and mobile applications using WPF,
+        My university studies included: general programming in C# (using .Net), Java and C++; creating desktop and mobile applications using WPF,
          Xamarin and Xcode; low level programming in Assembly; databases, full stack web development, and a bit of game development.
           <br>
           <br>
@@ -203,6 +216,38 @@
 <ul class="contacts">
 
   <li class="contactlistitem">
+    <h2 class="contacttitle">LinkedIn</h2>
+    <div class="contactitem" onclick="clickContact('link','contactLinkedIn')">
+      <div class="contpicbg">
+        <img src="img/linkedin.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactLinkedIn"
+        value=
+        "linkedin.com/in/péter-panyik-a31105215"
+        >
+      </input>
+      <img src="img/newtab.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+  <li class="contactlistitem">
+    <h2 class="contacttitle">Upwork</h2>
+    <div class="contactitem" onclick="clickContact('link','contactUpwork')">
+      <div class="contpicbg">
+        <img src="img/upwork.svg" alt="" class="contpic">
+      </div>
+      <input type="text" readonly class="conttext" id="contactUpwork"
+        value=
+        "upwork.com/freelancers/~017114e4073c503e42"
+        >
+      </input>
+      <img src="img/newtab.svg" alt="" class="cpypic">
+    </div>
+  </li>
+
+
+  <li class="contactlistitem">
+    <h2 class="contacttitle">E-mail</h2>
     <div class="contactitem" onclick="clickContact('copy','contactEmail')">
       <div class="contpicbg">
         <img src="img/mail.svg" alt="" class="contpic">
@@ -217,20 +262,22 @@
   </li>
 
   <li class="contactlistitem">
-    <div class="contactitem" onclick="clickContact('copy','contactPhone')">
+    <h2 class="contacttitle">GitHub</h2>
+    <div class="contactitem" onclick="clickContact('link','contactGithub')">
       <div class="contpicbg">
-        <img src="img/phone.svg" alt="" class="contpic">
+        <img src="img/github.svg" alt="" class="contpic">
       </div>
-      <input type="text" readonly class="conttext" id="contactPhone"
+      <input type="text" readonly class="conttext" id="contactGithub"
         value=
-        "+36 20 622 8586"
+        "github.com/Peter226"
         >
       </input>
-        <img src="img/cpy.svg" alt="" class="cpypic">
+      <img src="img/newtab.svg" alt="" class="cpypic">
     </div>
   </li>
 
   <li class="contactlistitem">
+    <h2 class="contacttitle">Discord ID</h2>
     <div class="contactitem" onclick="clickContact('copy','contactDiscord')">
       <div class="contpicbg">
         <img src="img/dc.svg" alt="" class="contpic">
@@ -245,23 +292,37 @@
   </li>
 
   <li class="contactlistitem">
-    <div class="contactitem" onclick="clickContact('link','contactGithub')">
+    <h2 class="contacttitle">Phone (Hungary)</h2>
+    <div class="contactitem" onclick="clickContact('copy','contactPhone')">
       <div class="contpicbg">
-        <img src="img/github.svg" alt="" class="contpic">
+        <img src="img/phone.svg" alt="" class="contpic">
       </div>
-      <input type="text" readonly class="conttext" id="contactGithub"
+      <input type="text" readonly class="conttext" id="contactPhone"
         value=
-        "github.com/Peter226"
+        "+36 20 622 8586"
         >
       </input>
-      <img src="img/newtab.svg" alt="" class="cpypic">
+        <img src="img/cpy.svg" alt="" class="cpypic">
     </div>
   </li>
 
+  
 
 </ul>
 </div>
 
+<footer>
+  <div class="copyrightsymbol">©</div>
+  <div class="copyrighttext"> 2023 <script>
+  let currentYear = new Date().getFullYear();
+ if(currentYear != 2023) document.write( "- " + currentYear); 
+ </script> Péter Csaba Panyik | All Rights Reserved
+ </div>
+</footer>
+
+
 </div>
+
+
   </body>
 </html>

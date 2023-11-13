@@ -24,9 +24,12 @@ for(var wchar = 1;wchar <= s.length;wchar++){
     writinw = false;
     await sleep(1000);
   }
-  if(s.charAt(wchar) == ':'){
+  if(s.charAt(wchar) + "" + s.charAt(wchar+1) == "😄"){
     writinw = false;
     await sleep(1250);
+  }
+  if(s.charAt(wchar-1) + "" + s.charAt(wchar) == "😄"){
+    wchar++;
   }
   writinw = true;
   if(s.charAt(wchar - 1) != '<'){
