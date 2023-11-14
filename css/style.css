@@ -45,12 +45,7 @@ a {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
 }
-#boxskills {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-}
+
 #boxcontact{
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
@@ -109,7 +104,6 @@ a {
   margin: 1% 0px 0px 0px;
   text-align: center;
   border-radius: 10px;
-  background-color: rgba(22,23,26,0.8);
   margin: 32px 0px 32px 0px;
   text-align: left;
   display: flex;
@@ -140,49 +134,6 @@ a {
   box-shadow: 5px 10px 8px rgb(0,0,0,0.3);
 }
 
-/*Skills section*/
-.skillscontainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: auto;
-}
-.skillcontainer{
-  width: 500px;
-  max-width: 70vw;
-  border-radius: 10px;
-  background-color: rgba(22,23,26,0.8);
-  margin: 16px 16px 16px 16px;
-  display: flex;
-  align-items: flex-start;
-  overflow: hidden;
-}
-.skillicon{
-  width: 56px;
-  padding: 10px;
-}
-.skilltitle{
-  background-color: rgba(62,63,66,0.3);
-  font-size: 26px;
-  line-height: 40px;
-  padding: 16px 16px 16px 16px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 8px rgb(0,0,0,0.3);
-}
-.skilltext{
-  width: 100%;
-  background-color: rgba(32,33,36,0.8);
-  padding: 0px 0px 0px 0px;
-  border-top-left-radius: 10px;
-}
-.skilldesc{
-  padding: 8px 16px 16px 16px;
-  color: rgb(206,208,210);
-  flex-grow: 2;
-  line-height: 26px;
-  font-size: 18px;
-}
 .button, .activebutton{
   font-size: 26.25px;
   color: rgb(245, 240, 255);
@@ -350,42 +301,6 @@ li{
 
   .navmenupic{
     width: 80px;
-  }
-
-
-  .skillcontainer{
-    width: 800px;
-    border-radius: 10px;
-    background-color: rgba(22,23,26,0.8);
-    margin: 16px 16px 16px 16px;
-    display: flex;
-    align-items: flex-start;
-    overflow:hidden;
-  }
-  .skillicon{
-    width: 112px;
-    padding: 20px;
-  }
-  .skilltitle{
-    background-color: rgba(62,63,66,0.3);
-    font-size: 52px;
-    line-height: 80px;
-    padding: 16px 16px 16px 16px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 8px rgb(0,0,0,0.3);
-  }
-  .skilltext{
-    width: 100%;
-    background-color: rgba(32,33,36,0.8);
-    padding: 0px 0px 0px 0px;
-    border-top-left-radius: 10px;
-  }
-  .skilldesc{
-    padding: 8px 16px 16px 16px;
-    color: rgb(206,208,210);
-    flex-grow: 2;
-    line-height: 40px;
-    font-size: 28px;
   }
 
   .portfoliopic{
