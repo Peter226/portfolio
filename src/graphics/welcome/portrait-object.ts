@@ -55,7 +55,7 @@ export class PortraitObject extends GraphicsObject {
 
 
         const loader = new FBXLoader();
-        loader.load( '/models/portfolio_brickwall.fbx',  ( object ) => {
+        loader.load( './models/portfolio_brickwall.fbx',  ( object ) => {
             this.portf = object;
             
             this.portf.rotation.set(0,0,0);
@@ -84,7 +84,6 @@ export class PortraitObject extends GraphicsObject {
         this.pfpModelPosition = new THREE.Vector3(-innerWidth * 0.5 + rect.left, -innerHeight * 0.5 + (innerHeight - rect.y), 0);
         this.portf.position.set(this.pfpModelPosition.x,this.pfpModelPosition.y,this.pfpModelPosition.z);
         this.portf.scale.set(this.pfpModelScale,this.pfpModelScale,this.pfpModelScale);
-        console.log(rect);
     }
 
     Animate(animationTime: number, mouse : SimpleMouse): void {
