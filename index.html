@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,323 +19,313 @@
   </head>
   <body>
     <canvas id="background"></canvas>
-    <script src="js/pixi.min.js"></script>
-    <script src="js/background.js"></script>
     <script src="js/css_hax.js"></script>
-<nav>
-  <script src="js/nav.js"></script>
-    <ul class="navlist" id="navitems">
-      <li class="navitem"><p><div class="button" id="navbuttonhome" onclick="scrollToElement('boxhome')">Home</div></p></li>
-      <li class="navitem"><p><div class="button" id="navbuttonabout" onclick="scrollToElement('boxabout')">About Me</div></p></li>
-      <li class="navitem"><p><div class="button" id="navbuttonskills" onclick="scrollToElement('boxskills')">My Skills</div></p></li>
-      <li class="navitem"><p><div class="button" id="navbuttonprojects" onclick="scrollToElement('boxprojects')">Projects</div></p></li>
-      <li class="navitem"><p><div class="button" id="navbuttoncontact" onclick="scrollToElement('boxcontact')">Contact</div></p></li>
+    <nav>
+      <script src="js/nav.js"></script>
+        <ul class="navlist" id="navitems">
+          <li class="navitem"><p><div class="button" id="navbuttonhome" onclick="scrollToElement('boxhome')">Home</div></p></li>
+          <li class="navitem"><p><div class="button" id="navbuttonabout" onclick="scrollToElement('boxabout')">About Me</div></p></li>
+          <li class="navitem"><p><div class="button" id="navbuttonskills" onclick="scrollToElement('boxskills')">My Skills</div></p></li>
+          <li class="navitem"><p><div class="button" id="navbuttonprojects" onclick="scrollToElement('boxprojects')">Projects</div></p></li>
+          <li class="navitem"><p><div class="button" id="navbuttoncontact" onclick="scrollToElement('boxcontact')">Contact</div></p></li>
+        </ul>
+        <div id="navmenuopener">
+          <div id="navmenuopenerbutton" onclick="toggleNavMenu()"><img src="img/menu.svg" class="navmenupic"></div>
+        </div>
+    </nav>
+
+
+    <p id="copyMessage">Copied!</p>
+    <script src="js/copy_notify.js"></script>
+    <div class="wrapper">
+
+
+
+    <div id="boxhome" classList="section">
+      <div class="flex-row">
+      <div class="portrait-container">
+        <div class="portrait-aligner">
+          <div id="portrait-anchor">
+        </div>
+    </div>
+      </div>
+      <div class="verticalwrapper">
+        <div class="centeredtext">
+          <div id="welcome">
+            <p id="welcometxt">Hi! Welcome!<br><br>I'm Péter 😄</p>
+          </div>
+          <script src="js/welcome.js"></script>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <div id="boxabout" class="section">
+          <div class="sectiontitle">
+          About me
+          </div>
+          <div class="sectiontext">
+            <div id="abouttext">
+              <div class="abouttextcontainer">
+                <img src="img/peter_p.png" class="portfoliopic"></img>
+            I'm Péter Panyik, a <script src="js/myage.js"></script> year old Computer Science Engineer,
+            graduated at John von Neumann University in 2023, currently working freelance as a game developer and generalist programmer.
+            <br>
+            <br>
+            I'm mainly interested in gameplay programming, shader programming, vfx and general-purpose .Net / C# programming.
+              <br>
+              <br>
+            My university studies included: general programming in C# (using .Net), Java and C++; creating desktop and mobile applications using WPF,
+            Xamarin and Xcode; low level programming in Assembly; databases, full stack web development, and a bit of game development.
+              <br>
+              <br>
+            I have a passion for programming and game development, I started programming at the age of 13, using Unity.
+            <br>
+            <br>
+            My motivation came from popular sandbox games, such as Garry's Mod, Minecraft, Terraria. I love to create things, and game development had a promise of this creative freedom.
+            <br>
+              <br>
+            Bedsides IT, I also know a bit of electronics, since I studied it as a subject in High School, and sometimes I build circuits for Arduino, along with a bit of C++ coding.
+            </div>
+            </div>
+          </div>
+    </div>
+
+    <div id="boxskills" class="section">
+          <div class="sectiontitle">
+          My Skills
+          </div>
+
+          <div class="skillscontainer" id="skillgrid">
+          <div class="skillcontainer">
+            <div class="skillheader">
+              <img src="img/skills/controller.svg" class="skillicon"></img>
+              <div class="skilltitle">Gameplay Programming</div>
+            </div>
+            <div class="skilltext">
+              
+              <div class="skilldesc">
+                -C# and Unity<br>
+                -Game systems<br>
+                -Optimized code<br>
+                -Burst-compiled code<br>
+                -Procedural content<br>
+                -Interactive mechanics<br>
+              </div>
+            </div>
+          </div>
+          <div class="skillcontainer">
+            <div class="skillheader">
+              <img src="img/skills/explosion.svg" class="skillicon"></img>
+              <div class="skilltitle">Shader Programming & VFX</div>
+            </div>
+            <div class="skilltext">
+              <div class="skilldesc">
+                -Shaders:<br>
+                &nbsp; ·Hlsl<br>
+                &nbsp; ·ShaderLab<br>
+                &nbsp; ·Shader graph<br>
+                &nbsp; ·Compute shaders<br>
+                -Particles:<br>
+                &nbsp; ·VFX graph<br>
+                &nbsp; ·Shuriken particle system<br>
+              </div>
+            </div>
+        </div>
+          <div class="skillcontainer">
+            <div class="skillheader">
+              <img src="img/skills/processor.svg" class="skillicon"></img>
+              <div class="skilltitle">General Programming</div>
+            </div>
+              <div class="skilltext">
+                <div class="skilldesc">
+                  -Knowledge of:<br>
+                  &nbsp; ·Object oriented programming<br>
+                  &nbsp; ·Data oriented programming<br>
+                  &nbsp; ·Memory management<br>
+                  &nbsp; ·Low level programming<br>
+                  -Proficient in C#<br>
+                  -C and C++<br>
+                  -I also know a bit of:<br>
+                  &nbsp; ·Assembly<br>
+                  &nbsp; ·Java<br>
+                </div>
+              </div>
+          </div>
+          <div class="skillcontainer">
+            <div class="skillheader">
+                <img src="img/skills/database.svg" class="skillicon"></img>
+                <div class="skilltitle">Databases</div>
+              </div>
+              <div class="skilltext">
+                <div class="skilldesc">
+                  -Database design:<br>
+                  &nbsp; ·Planning and DDL implementation<br>
+                  &nbsp; ·Relational Schemas<br>
+                  &nbsp; ·ERDs<br>
+                  -Database usage:<br>
+                  &nbsp; ·DML, DCL and DQL commands<br>
+                  &nbsp; ·Complex sql queries<br>
+                  &nbsp; ·Functions, procedures, triggers<br>
+                  -Known database engines:<br>
+                  &nbsp; ·Oracle DB<br>
+                  &nbsp; ·MySQL<br>
+                </div>
+              </div>
+          </div>
+          <div class="skillcontainer">
+            <div class="skillheader">
+              <img src="img/skills/webprog.svg" class="skillicon"></img>
+              <div class="skilltitle">Websites</div>
+            </div>
+              <div class="skilltext">
+                <div class="skilldesc">
+                  -Full stack development:<br>
+                  &nbsp; ·Javascript<br>
+                  &nbsp; ·Html<br>
+                  &nbsp; ·Css<br>
+                  &nbsp; ·Php<br>
+                </div>
+              </div>
+          </div>
+          </div>
+          <script src="js/arrange_skills.js"></script>
+    </div>
+
+    <div id="boxprojects" class="section">
+
+
+      <div class="sectiontitle">
+      Projects
+      </div>
+
+
+      <ul class="projectlist" id="projectlisting">
+        <script src="js/projects.js"></script>
+
+        <!--script>loadProject("fps");</script-->
+        <script>loadProject("huehades");</script>
+        <script>loadProject("voxel");</script>
+        <script>loadProject("paradise");</script>
+        <script>loadProject("gameoflife");</script>
+        <script>loadProject("survival");</script>
+
+      </ul>
+    </div>
+
+
+    <div id="boxcontact" class="section">
+      <script src="js/contacts.js"></script>
+      <div class="sectiontitle">
+      Contact Me
+      </div>
+
+    <ul class="contacts">
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">LinkedIn</h2>
+        <div class="contactitem" onclick="clickContact('link','contactLinkedIn')">
+          <div class="contpicbg">
+            <img src="img/linkedin.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactLinkedIn"
+            value=
+            "linkedin.com/in/péter-panyik-a31105215"
+            >
+          </input>
+          <img src="img/newtab.svg" alt="" class="cpypic">
+        </div>
+      </li>
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">Upwork</h2>
+        <div class="contactitem" onclick="clickContact('link','contactUpwork')">
+          <div class="contpicbg">
+            <img src="img/upwork.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactUpwork"
+            value=
+            "upwork.com/freelancers/~017114e4073c503e42"
+            >
+          </input>
+          <img src="img/newtab.svg" alt="" class="cpypic">
+        </div>
+      </li>
+
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">E-mail</h2>
+        <div class="contactitem" onclick="clickContact('copy','contactEmail')">
+          <div class="contpicbg">
+            <img src="img/mail.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactEmail"
+            value=
+            "panyikpeti226@gmail.com"
+            >
+          </input>
+            <img src="img/cpy.svg" alt="" class="cpypic">
+        </div>
+      </li>
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">GitHub</h2>
+        <div class="contactitem" onclick="clickContact('link','contactGithub')">
+          <div class="contpicbg">
+            <img src="img/github.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactGithub"
+            value=
+            "github.com/Peter226"
+            >
+          </input>
+          <img src="img/newtab.svg" alt="" class="cpypic">
+        </div>
+      </li>
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">Discord ID</h2>
+        <div class="contactitem" onclick="clickContact('copy','contactDiscord')">
+          <div class="contpicbg">
+            <img src="img/dc.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactDiscord"
+            value=
+            "peter226"
+            >
+          </input>
+          <img src="img/cpy.svg" alt="" class="cpypic">
+        </div>
+      </li>
+
+      <li class="contactlistitem">
+        <h2 class="contacttitle">Phone (Hungary)</h2>
+        <div class="contactitem" onclick="clickContact('copy','contactPhone')">
+          <div class="contpicbg">
+            <img src="img/phone.svg" alt="" class="contpic">
+          </div>
+          <input type="text" readonly class="conttext" id="contactPhone"
+            value=
+            "+36 20 622 8586"
+            >
+          </input>
+            <img src="img/cpy.svg" alt="" class="cpypic">
+        </div>
+      </li>
     </ul>
-    <div id="navmenuopener">
-      <div id="navmenuopenerbutton" onclick="toggleNavMenu()"><img src="img/menu.svg" class="navmenupic"></div>
     </div>
-</nav>
-
-
-<p id="copyMessage">Copied!</p>
-<script src="js/copy_notify.js"></script>
-<div class="wrapper">
-
-
-
-<div id="boxhome" classList="section">
-  <div class="flex-row">
-  <div class="portrait-container">
-    <div class="portrait-aligner">
-      <div>
-        <img src="img/brickwall_low.png" class="home-portrait"></img>
-  </div>
-</div>
-  </div>
-  <div class="verticalwrapper">
-    <div class="centeredtext">
-      <div id="welcome">
-        <p id="welcometxt">Hi! Welcome!<br><br>I'm Péter 😄</p>
-      </div>
-      <script src="js/welcome.js"></script>
+    <footer>
+      <div class="copyrightsymbol">©</div>
+      <div class="copyrighttext"> 2023 <script>
+      let currentYear = new Date().getFullYear();
+    if(currentYear != 2023) document.write( "- " + currentYear); 
+    </script> Péter Csaba Panyik | All Rights Reserved
     </div>
-  </div>
-</div>
-</div>
-
-
-
-
-<div id="boxabout" class="section">
-      <div class="sectiontitle">
-      About me
-      </div>
-      <div class="sectiontext">
-        <div id="abouttext">
-          <div class="abouttextcontainer">
-            <img src="img/peter_p.png" class="portfoliopic"></img>
-        I'm Péter Panyik, a <script src="js/myage.js"></script> year old Computer Science Engineer,
-        graduated at John von Neumann University in 2023, currently working freelance as a game developer and generalist programmer.
-        <br>
-        <br>
-        I'm mainly interested in gameplay programming, shader programming, vfx and general-purpose .Net / C# programming.
-          <br>
-          <br>
-        My university studies included: general programming in C# (using .Net), Java and C++; creating desktop and mobile applications using WPF,
-         Xamarin and Xcode; low level programming in Assembly; databases, full stack web development, and a bit of game development.
-          <br>
-          <br>
-        I have a passion for programming and game development, I started programming at the age of 13, using Unity.
-        <br>
-        <br>
-        My motivation came from popular sandbox games, such as Garry's Mod, Minecraft, Terraria. I love to create things, and game development had a promise of this creative freedom.
-        <br>
-          <br>
-        Bedsides IT, I also know a bit of electronics, since I studied it as a subject in High School, and sometimes I build circuits for Arduino, along with a bit of C++ coding.
-        </div>
-        </div>
-      </div>
-</div>
-
-<div id="boxskills" class="section">
-      <div class="sectiontitle">
-      My Skills
-      </div>
-
-      <div class="skillscontainer" id="skillgrid">
-      <div class="skillcontainer">
-        <div class="skillheader">
-          <img src="img/skills/controller.svg" class="skillicon"></img>
-          <div class="skilltitle">Gameplay Programming</div>
-        </div>
-        <div class="skilltext">
-          
-          <div class="skilldesc">
-            -C# and Unity<br>
-            -Game systems<br>
-            -Optimized code<br>
-            -Burst-compiled code<br>
-            -Procedural content<br>
-            -Interactive mechanics<br>
-          </div>
-        </div>
-      </div>
-      <div class="skillcontainer">
-        <div class="skillheader">
-          <img src="img/skills/explosion.svg" class="skillicon"></img>
-          <div class="skilltitle">Shader Programming & VFX</div>
-        </div>
-        <div class="skilltext">
-          <div class="skilldesc">
-            -Shaders:<br>
-            &nbsp ·Hlsl<br>
-            &nbsp ·ShaderLab<br>
-            &nbsp ·Shader graph<br>
-            &nbsp ·Compute shaders<br>
-            -Particles:<br>
-            &nbsp ·VFX graph<br>
-            &nbsp ·Shuriken particle system<br>
-          </div>
-        </div>
+    </footer>
     </div>
-      <div class="skillcontainer">
-        <div class="skillheader">
-          <img src="img/skills/processor.svg" class="skillicon"></img>
-          <div class="skilltitle">General Programming</div>
-        </div>
-          <div class="skilltext">
-            <div class="skilldesc">
-              -Knowledge of:<br>
-              &nbsp ·Object oriented programming<br>
-              &nbsp ·Data oriented programming<br>
-              &nbsp ·Memory management<br>
-              &nbsp ·Low level programming<br>
-              -Proficient in C#<br>
-              -C and C++<br>
-              -I also know a bit of:<br>
-              &nbsp ·Assembly<br>
-              &nbsp ·Java<br>
-            </div>
-          </div>
-      </div>
-      <div class="skillcontainer">
-        <div class="skillheader">
-            <img src="img/skills/database.svg" class="skillicon"></img>
-            <div class="skilltitle">Databases</div>
-          </div>
-          <div class="skilltext">
-            <div class="skilldesc">
-              -Database design:<br>
-              &nbsp ·Planning and DDL implementation<br>
-              &nbsp ·Relational Schemas<br>
-              &nbsp ·ERDs<br>
-              -Database usage:<br>
-              &nbsp ·DML, DCL and DQL commands<br>
-              &nbsp ·Complex sql queries<br>
-              &nbsp ·Functions, procedures, triggers<br>
-              -Known database engines:<br>
-              &nbsp ·Oracle DB<br>
-              &nbsp ·MySQL<br>
-            </div>
-          </div>
-      </div>
-      <div class="skillcontainer">
-        <div class="skillheader">
-          <img src="img/skills/webprog.svg" class="skillicon"></img>
-          <div class="skilltitle">Websites</div>
-        </div>
-          <div class="skilltext">
-            <div class="skilldesc">
-              -Full stack development:<br>
-              &nbsp ·Javascript<br>
-              &nbsp ·Html<br>
-              &nbsp ·Css<br>
-              &nbsp ·Php<br>
-            </div>
-          </div>
-      </div>
-      </div>
-      <script src="js/arrange_skills.js"></script>
-</div>
-
-<div id="boxprojects" class="section">
-
-
-  <div class="sectiontitle">
-  Projects
-  </div>
-
-
-  <ul class="projectlist" id="projectlisting">
-    <script src="js/projects.js"></script>
-
-    <!--script>loadProject("fps");</script-->
-    <script>loadProject("huehades");</script>
-    <script>loadProject("voxel");</script>
-    <script>loadProject("paradise");</script>
-    <script>loadProject("gameoflife");</script>
-    <script>loadProject("survival");</script>
-
-  </ul>
-</div>
-
-
-<div id="boxcontact" class="section">
-  <script src="js/contacts.js"></script>
-  <div class="sectiontitle">
-  Contact Me
-  </div>
-
-<ul class="contacts">
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">LinkedIn</h2>
-    <div class="contactitem" onclick="clickContact('link','contactLinkedIn')">
-      <div class="contpicbg">
-        <img src="img/linkedin.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactLinkedIn"
-        value=
-        "linkedin.com/in/péter-panyik-a31105215"
-        >
-      </input>
-      <img src="img/newtab.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">Upwork</h2>
-    <div class="contactitem" onclick="clickContact('link','contactUpwork')">
-      <div class="contpicbg">
-        <img src="img/upwork.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactUpwork"
-        value=
-        "upwork.com/freelancers/~017114e4073c503e42"
-        >
-      </input>
-      <img src="img/newtab.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">E-mail</h2>
-    <div class="contactitem" onclick="clickContact('copy','contactEmail')">
-      <div class="contpicbg">
-        <img src="img/mail.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactEmail"
-        value=
-        "panyikpeti226@gmail.com"
-        >
-      </input>
-        <img src="img/cpy.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">GitHub</h2>
-    <div class="contactitem" onclick="clickContact('link','contactGithub')">
-      <div class="contpicbg">
-        <img src="img/github.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactGithub"
-        value=
-        "github.com/Peter226"
-        >
-      </input>
-      <img src="img/newtab.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">Discord ID</h2>
-    <div class="contactitem" onclick="clickContact('copy','contactDiscord')">
-      <div class="contpicbg">
-        <img src="img/dc.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactDiscord"
-        value=
-        "peter226"
-        >
-      </input>
-      <img src="img/cpy.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-  <li class="contactlistitem">
-    <h2 class="contacttitle">Phone (Hungary)</h2>
-    <div class="contactitem" onclick="clickContact('copy','contactPhone')">
-      <div class="contpicbg">
-        <img src="img/phone.svg" alt="" class="contpic">
-      </div>
-      <input type="text" readonly class="conttext" id="contactPhone"
-        value=
-        "+36 20 622 8586"
-        >
-      </input>
-        <img src="img/cpy.svg" alt="" class="cpypic">
-    </div>
-  </li>
-
-  
-
-</ul>
-</div>
-
-<footer>
-  <div class="copyrightsymbol">©</div>
-  <div class="copyrighttext"> 2023 <script>
-  let currentYear = new Date().getFullYear();
- if(currentYear != 2023) document.write( "- " + currentYear); 
- </script> Péter Csaba Panyik | All Rights Reserved
- </div>
-</footer>
-
-
-</div>
-
-
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
