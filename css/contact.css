@@ -1,0 +1,115 @@
+.contacttitle{
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.contactlistitem{
+    margin: 0px 0px 4vh 0px;
+    margin: 0px 0px  calc(var(--vh, 1vh) * 4) 0px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    justify-content: space-evenly;
+}
+
+.contactitem{
+    max-width: 80vw;
+    cursor: pointer;
+    background: rgba(32,33,36,0.8);
+    border-radius: 40px;
+    -webkit-transition: color 100ms linear, transform 100ms linear, background-color linear 100ms;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    display: inline-flex;
+    max-height: 80px;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.contactitem:hover{
+    background: rgba(52,54,58,0.8);
+}
+.contactitem:active{
+    background: rgba(72,74,78,0.8);
+}
+  
+.contpic{
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+}
+.conttext{
+    width:300px;
+    line-height: 80px;
+    text-align: left;
+    font-size: 20px;
+    background: none;
+    border: none;
+    pointer-events: none;
+    overflow: visible;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 16px;
+    text-overflow: ellipsis;
+}
+.conttext:focus{
+    outline: none;
+    border: none;
+}
+  
+.contpicbg{
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    background: rgba(32,33,36,0.8);
+    border-radius: 40px;
+    display: inline-block;
+}
+  
+  
+.cpypic{
+    width: 80px;
+    height: 30px;
+    align-self: flex-end;
+    margin: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: inline-block;
+}
+
+
+@media (min-width:600px) and (orientation: portrait) {
+    .contactitem{
+        border-radius: 60px;
+        max-height: 120px;
+    }
+    .contpic{
+        padding: 15px;
+        height: 90px;
+        width: 90px;
+    }
+    .conttext{
+        line-height: 120px;
+        font-size: 33.75px;
+        width:506px;
+    }
+
+    .contpicbg{
+        height: 120px;
+        width: 120px;
+        border-radius: 60px;
+    }
+    .cpypic{
+        height: 45px;
+        padding: 37.5px;
+    }
+}
