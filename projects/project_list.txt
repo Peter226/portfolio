@@ -1,6 +1,0 @@
-huehades
-fps
-voxel
-paradise
-gameoflife
-survival

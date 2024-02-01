@@ -1,7 +1,7 @@
 //project load queue
+
 var projectQueue = [];
 var loadingProject = false;
-
 
 //load a project dynamically and append to the list
 function loadProject(projectName){
@@ -19,7 +19,7 @@ function loadProject(projectName){
       listItem.appendChild(projectItem);
       projectItem.className = "projectitem";
 
-      projectLink =document.createElement("A");
+      projectLink = document.createElement("A");
       projectLink.setAttribute("href",project.url);
       projectItem.appendChild(projectLink);
       projectLink.className = "projectlink";
