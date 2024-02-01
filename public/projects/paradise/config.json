@@ -1,6 +1,6 @@
 {
 "title":"PewPew Paradise",
-"thumb":"projects/paradise/preview.png",
+"thumb":"projects/paradise/preview.webp",
 "desc":"A small platformer-shooter game, made for a university group project/assignment. Inspired by Bubble Bobble, and created in WPF using C# and .Net Framework.",
 "url":"projects/paradise/page.html"
 }

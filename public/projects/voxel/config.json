@@ -1,6 +1,6 @@
 {
 "title":"Voxel Terrain",
-"thumb":"projects/voxel/preview.png",
+"thumb":"projects/voxel/preview.webp",
 "desc":"A smooth voxel terrain system made for Unity. Almost infinite, with a huge view distance. Heavily optimizied with Burst and it utilizes the Job System, made to perform on low-end devices.",
 "url":"projects/voxel/page.html"
 }

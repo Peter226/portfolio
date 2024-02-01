@@ -1,6 +1,6 @@
 {
 "title":"FPS Prototype",
-"thumb":"projects/fps/preview.png",
+"thumb":"projects/fps/preview.webp",
 "desc":"A multiplayer FPS prototype. <br> I used Mirror for networking, and my own FPS player controller. The controller feels \"snappy\"; and, it also reacts to physics and vice-versa.",
 "url":"projects/fps/page.html"
 }
