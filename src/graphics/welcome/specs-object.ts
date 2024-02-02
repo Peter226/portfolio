@@ -96,7 +96,7 @@ export class SpecsObject extends GraphicsObject {
     }
 
 
-    Animate(animationTime: number, mouse : SimpleMouse): void {
+    Animate(animationTime: number, animationDelta : number, mouse : SimpleMouse): void {
         this.material.uniforms.time = { value: animationTime * 2.0 }
         this.material.uniforms.cursorPosition = { value: new THREE.Vector2(mouse.x, mouse.y) }
     }

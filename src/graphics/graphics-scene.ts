@@ -55,14 +55,15 @@ export class GraphicsScene {
     }
  
     private Animate(graphicsScene : GraphicsScene){
-        this.animationTime += this.clock.getDelta() * 5.0;
+        const delta = this.clock.getDelta() * 5.0;
+        this.animationTime += delta;
 
         if(this.innerWidth != window.innerWidth || this.innerHeight != window.innerHeight){
             this.UpdateWindowSize();
         }
 
         this.graphicsObjects.forEach(graphicsObject => {
-            graphicsObject.Animate(this.animationTime, this.mouse);
+            graphicsObject.Animate(this.animationTime, delta, this.mouse);
         });
 
         requestAnimationFrame(() => {this.Animate(graphicsScene);});

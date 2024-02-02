@@ -17,6 +17,6 @@ export abstract class GraphicsObject {
         
     }
 
-    abstract Animate(animationTime : number, mouse : SimpleMouse) : void;
+    abstract Animate(animationTime : number, animationDelta : number, mouse : SimpleMouse) : void;
     abstract UpdateWindowSize(newWidth : number, newHeight : number) : void;
 }
