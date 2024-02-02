@@ -52,7 +52,20 @@
       <div class="verticalwrapper">
         <div class="centeredtext">
           <div id="welcome">
-            <p id="welcometxt">Hi! Welcome!<br><br>I'm Péter 😄</p>
+            <div id="welcometxt">
+              <h1 id="welcometxtwelcome">
+              <br>
+              Hi! Welcome!<br>
+              I'm Péter 😄
+              </h1>
+              <h2 id="welcometxtlist">
+              - Freelancer<br>
+              - Unity Developer<br>
+              - Shader Programmer
+              </h2>
+              <br>
+              <button class="button" onclick="scrollToElement('boxprojects')">⏬ See My Projects ⏬</button>
+            </div>
           </div>
           <script src="js/welcome.js"></script>
         </div>
@@ -185,9 +198,13 @@
                 <div class="skilldesc">
                   -Full stack development:<br>
                   &nbsp; ·Javascript<br>
+                  &nbsp; ·Typescript<br>
                   &nbsp; ·Html<br>
                   &nbsp; ·Css<br>
                   &nbsp; ·Php<br>
+                  -Web graphics:<br>
+                  &nbsp; ·ThreeJS<br>
+                  &nbsp; ·PixiJS<br>
                 </div>
               </div>
           </div>
@@ -201,16 +218,29 @@
       <div class="sectiontitle">
       Projects
       </div>
+      <script src="js/projects.js"></script>
 
-      <ul class="projectlist" id="projectlisting">
-        <script src="js/projects.js"></script>
-        <!--script>loadProject("fps");</script-->
-        <script>loadProject("huehades");</script>
-        <script>loadProject("voxel");</script>
-        <script>loadProject("paradise");</script>
-        <script>loadProject("gameoflife");</script>
-        <script>loadProject("survival");</script>
+      <!--h2>Professional</h2-->
+        <ul class="projectlist" id="pl1">
+          <script>loadProject("huehades","pl1");</script>
+          <script>loadProject("voxel","pl1");</script>
+          <script>loadProject("paradise","pl1");</script>
+          <script>loadProject("gameoflife","pl1");</script>
+          <script>loadProject("survival","pl1");</script>
+        </ul>
+      <!--h2>University</h2>
+      <ul class="projectlist" id="pl2">
+        <script>loadProject("huehades","pl2");</script>
+        <script>loadProject("paradise","pl2");</script>
       </ul>
+      <h2>Hobby</h2>
+      <ul class="projectlist" id="pl3">
+        
+        <script>loadProject("fps","pl3");</script>
+        <script>loadProject("voxel","pl3");</script>
+        <script>loadProject("gameoflife","pl3");</script>
+        <script>loadProject("survival","pl3");</script>
+      </ul-->
     </div>
 
 

@@ -23,5 +23,5 @@
       "vite-plugin-glsl/ext"
     ]
   },
-  "include": ["src"]
+  "include": ["src", "public/js/projects.js"]
 }

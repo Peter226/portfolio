@@ -24,6 +24,23 @@
     user-select: none;
 }
 
+#welcometxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcometxtwelcome{
+    font-size: 9vmin;
+}
+
+#welcometxtlist{
+    font-size: 5vmin;
+    text-align: left;
+    color: rgb(206,208,210);
+}
+
+
 @media (max-width:800px) or (max-height:500px) {
 
     #welcome {
