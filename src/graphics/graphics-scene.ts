@@ -70,21 +70,26 @@ export class GraphicsScene {
     }
 
     UpdateWindowSize(){
+        
         this.innerWidth = window.innerWidth;
         this.innerHeight = window.innerHeight;
+
+        this.canvas.style.width = innerWidth.toString() + "px";
+        this.canvas.style.height = innerHeight.toString() + "px";
+
         this.graphicsObjects.forEach(graphicsObject => {
             graphicsObject.UpdateWindowSize(this.innerWidth, this.innerHeight);
         });
 
         this.camera.left = -this.innerWidth/2;
         this.camera.right = this.innerWidth/2;
-        this.camera.top = -this.innerHeight/2;
-        this.camera.bottom = this.innerHeight/2;
+        this.camera.top = this.innerHeight/2;
+        this.camera.bottom = -this.innerHeight/2;
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(this.innerWidth, this.innerHeight);
 
-        this.canvas.style.width = innerWidth.toString() + "px";
-        this.canvas.style.height = innerHeight.toString() + "px";
+        this.camera.updateProjectionMatrix();
+        
     }
 
 }
