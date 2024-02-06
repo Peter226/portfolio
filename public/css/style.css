@@ -178,6 +178,11 @@ h1{
   text-align: center;
   font-size: 9vmin;
 }
+
+h2{
+  font-size: 28px;
+}
+
 nav{
   position: fixed;
   top: 0px;
@@ -288,6 +293,9 @@ li{
       padding-bottom: 0px;
   }
 
+  h2{
+    font-size: 56px;
+  }
   
   #navitems{
     display: none;

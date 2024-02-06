@@ -127,4 +127,7 @@
     font-size: 30px;
   }
 
+  .projectlist{
+    line-height: 240px;
+  }
 }
