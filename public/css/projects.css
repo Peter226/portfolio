@@ -5,16 +5,18 @@
     min-height: calc(var(--vh, 1vh) * 100);
   }
 
+  .projectcategory{
+    display: block;
+  }
+
   .projectlist{
     position: relative;
     text-align: center;
-    width: 100%;
     line-height: 120px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .projectlistitem{
@@ -22,22 +24,25 @@
     padding-bottom: 15px;
     padding-right: 15px;
     padding-left: 15px;
-    width: 210px;
-    max-width: 50%;
+    min-width: 210px;
+    max-width: 500px;
     text-align: left;
     float: none;
-    display: block;
+    display: flex;
+    flex-basis: 17vw;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
     line-height: normal;
     font-size: 15px;
   }
   
   .projectitem{
-    display: flex;
+    display: block;
     flex-direction: column;
   
     border-radius: 12.5px;
     overflow: hidden;
-    max-width: 100%;
     transform: scale(1.0);
     -webkit-transition: transform 100ms linear, background-color 100ms linear;
     cursor: pointer;
@@ -51,16 +56,15 @@
   
   .projectitem:hover{
     transform: scale(1.05);
-    background-color: rgba(52,54,58,0.9);
   }
   .projectitem:active{
-    background-color: rgba(72,74,78,0.9);
+    transform: scale(1.1);
   }
   
   .projpic{
     width: 100%;
-    min-height: 160px;
-    max-height: 240px;
+    min-height: 140px;
+    max-height: 380px;
     object-fit: cover;
     object-position: center;
     border-radius: 5.5px 5.5px 5.5px 5.5px;
@@ -93,21 +97,21 @@
 
 
 @media (min-width:600px) and (orientation: portrait) {
-
+/*
 .projectlistitem{
-    padding-right: 30px;
-    padding-left: 30px;
-    max-width: 90%;
-    margin-bottom: 50px;
-    margin-top: 50px;
+      padding-right: 30px;
+      padding-left: 30px;
+      max-width: 90%;
+      margin-bottom: 50px;
+      margin-top: 50px;
     }
 
 
     .projectitem{
-    border-radius: 45px;
-    width: 800px;
-    height: 1000px;
-    max-width: 100%;
+      border-radius: 45px;
+      width: 800px;
+      height: 1000px;
+      max-width: 100%;
     }
 
     .projpic{
@@ -127,5 +131,5 @@
     padding: 16px 32px 16px 32px;
     font-size: 32px;
     }
-
+*/
 }

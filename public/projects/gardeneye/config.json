@@ -1,0 +1,6 @@
+{
+"title":"GardenEye",
+"thumb":"projects/gardeneye/preview.webp",
+"desc":"A plant identification application for Android. Uses AI via an API to identify plants and match them to the GBIF database. Includes a local library to store identified plants for the user.",
+"url":"projects/gardeneye/page.html"
+}

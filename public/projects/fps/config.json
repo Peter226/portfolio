@@ -1,6 +1,6 @@
 {
-"title":"FPS Prototype",
+"title":"Physical Controller",
 "thumb":"projects/fps/preview.webp",
-"desc":"A multiplayer FPS prototype. <br> I used Mirror for networking, and my own FPS player controller. The controller feels \"snappy\"; and, it also reacts to physics and vice-versa.",
+"desc":"A custom-made FPS character controller which feels snappy and reacts to physics. Enables seamless rigidbody surfing for unique scenarios, such as moving platforms like boats, cars, airplanes etc.",
 "url":"projects/fps/page.html"
 }

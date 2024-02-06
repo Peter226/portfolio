@@ -1,6 +1,6 @@
 {
-"title":"GPU Game Of Life",
-"thumb":"projects/gameoflife/preview.webp",
-"desc":"Conway's Game of Life simulated on the GPU. It was written in hlsl as a compute shader, and it is made to be interactable. The simulation's UI is created using Unity's UI Toolkit.",
-"url":"projects/gameoflife/page.html"
+"title":"Range Indicator",
+"thumb":"projects/rangeindicator/preview.webp",
+"desc":"Turret range indicator solution for a tower defense game, which is a released indie title on Steam, called Forward Defense.",
+"url":"projects/rangeindicator/page.html"
 }
