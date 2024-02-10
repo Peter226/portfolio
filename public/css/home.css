@@ -43,7 +43,7 @@
 
 
 
-@media (max-width:600px) and (orientation: portrait) {
+@media (min-width:600px) and (orientation: portrait) {
     .portrait-container{
         position: absolute;
         width: 100%;
