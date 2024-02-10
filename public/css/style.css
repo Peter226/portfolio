@@ -330,21 +330,4 @@ li:hover {
 
 }
 
-::-webkit-scrollbar {
-  width: 2.5vmin;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(0,0,0,0.4);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(65, 95, 219,0.5);
-      border-radius: 10px 10px 10px 10px;
-        box-shadow: 0px 0px 20px rgba(0,0,0,1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(65, 95, 219);
-}
 
