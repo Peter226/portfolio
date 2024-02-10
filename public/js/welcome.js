@@ -50,7 +50,6 @@ for(var c = 0; c < welcomeChildren.length;c++){
     writinw = true;
     if(s.charAt(wchar - 1) != '<'){
       child.innerHTML = s.substring(0,wchar) + '_';
-    console.log(s.substring(0,wchar) + '_');
     }
     await sleep(Math.random() * 30 + 20);
   }
