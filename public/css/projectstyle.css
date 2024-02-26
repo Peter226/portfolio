@@ -138,7 +138,10 @@ li{
 
 @media (min-width:600px) and (orientation: portrait) {
   p{
-    font-size: 16px;
+    font-size: 20px;
+  }
+  .sectiontext{
+    font-size: 20px;
   }
   .project-image{
     height: auto;
@@ -146,8 +149,5 @@ li{
   }
   .image-caption{
     font-size: medium;
-  }
-  body{
-    background-color: rgb(255, 0, 0);
   }
 }
