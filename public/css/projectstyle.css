@@ -138,6 +138,7 @@ li{
 
 @media (min-width:600px) and (orientation: portrait) {
   .project-image{
-    height: 380px;
+    height: auto;
+    width: 80vw;
   }
 }
