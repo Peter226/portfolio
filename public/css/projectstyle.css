@@ -1,15 +1,20 @@
 .homebutton{
+  display: flex;
   position: fixed;
   top: 0px;
   left: 0px;
   margin: 8px;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .homebuttonicon{
   width: 32px;
   height: 32px;
   margin: 8px;
-  display: inline-block;
+  display: flex;
+  align-self: center;
 }
 
 a {
@@ -54,6 +59,7 @@ a {
   font-family: arial;
   color: white;
   font-family: 'JetBrains Mono', monospace;
+  text-size-adjust: none;
 }
 body{
   background-color: rgb(0,0,0);
@@ -124,7 +130,7 @@ li{
 
 .image-caption{
   color: rgb(206,208,210);
-  font-size: small;
+  font-size: 14px;
   margin: 1px;
   margin-bottom: 10px;
 }
@@ -138,16 +144,30 @@ li{
 
 @media (min-width:600px) and (orientation: portrait) {
   p{
+    font-size: 28px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  .image-caption{
     font-size: 20px;
   }
   .sectiontext{
-    font-size: 20px;
+    font-size: 28px;
   }
   .project-image{
     height: auto;
     width: 80vw;
   }
-  .image-caption{
-    font-size: medium;
+  
+
+  .homebutton{
+    margin: 8px;
+  }
+  
+  .homebuttonicon{
+    width: 64px;
+    height: 64px;
+    margin: 8px;
   }
 }
