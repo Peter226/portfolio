@@ -141,4 +141,11 @@ li{
     height: auto;
     width: 80vw;
   }
+  .image-caption{
+    font-size: medium;
+  }
+  p{
+    font-size: 24px;
+  }
+
 }
