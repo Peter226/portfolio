@@ -63,6 +63,11 @@
         height: 50%;
     }
 
+    #portrait-anchor{
+        position: relative;
+        top:20vh;
+    }
+
     #welcome {
         font-size: 8vmin;
     }

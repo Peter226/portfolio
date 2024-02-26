@@ -15,14 +15,188 @@
     <div class="wrapper">
       <div class="section">
         <h1>4x Strategy Territory Borders</h1>
+        <br>
+        <h2>Introduction</h2>
         <div class="sectiontext">
           <p>
-            This page is [Work In Progress]
+            In this project I had the opportunity to contribute to an (at the time) upcoming 4x strategy indie game, called New Stars. The game takes place in a galaxy, much like the the well-known hit Stellaris, but with it's on unique twists own the genre. To check out my work in action and support the creator of the game, you may consider purchasing it on Steam, linked below:
           </p>
         </div>
         <div class="centeringdiv">
           <iframe src="https://store.steampowered.com/widget/2231270/" frameborder="0" width="646" height="190"></iframe>
         </div>
+        <div class="sectiontext">
+        <p>
+          My contribution was a cosmetic but essential part of the game, the task was to create a border system for the empire territories. Each star in the empire's territory casts a radius around them, which is considered occupied. These occupied spaces need to merge together, and form a smooth boundary.
+          The boundary has to account for the following factors:
+        </p>
+          <ul>
+            <li>- Each star can change which empire it belongs to</li>
+            <li>- Empires can be added dynamically as new ones form</li>
+            <li>- Lastly, all of this has to work in real-time</li>
+          </ul>
+          <p>
+            The result is the following:
+          </p>
+      </div>
+
+      <div class="centeringdiv">
+        <div class="flex-horizontal">
+          <div class="project-image-container">
+            <img src="./preview.png" class="project-image">
+            <p class="image-caption">
+              Effect with enhanced ambience and colors
+            </p>
+          </div>
+
+          <div class="project-image-container">
+            <img src="./ingame.png" class="project-image">
+            <p class="image-caption">
+              In-game screenshot utilising the visual
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2>First steps</h2>
+      <div class="sectiontext">
+        <p>
+          As in all of my projects, first I had to assess all of the options to render such an effect.
+          <br>
+          <br>
+          An obvious starting point was some form of shaders. Since the effect is rendered on a 3D plane instead of the camera's plane, I decided to use a fragment shader approach. This also ensures, that, no matter where the camera faces the effect is still rendered in full resolution.
+          <br>
+          <br>
+          I considered using a compute shader, but I scratched the idea for the moment, since to display it in full resolution the compute shader would have to render the whole thing in a very high resolution, increasing render times and memory footprint. Of course further optimizations could exist, like only rendering visible areas and in a cascaded fashion (if we consider viewing from all angles), but unfortunately this would not fit the deadline and budget.
+          <br>
+          <br>
+          I also considered rendering a low-res representation and building a mesh off of this guide, but again, optimizing this would take a considerable amount of time.
+          <br>
+          <br>
+          I believe in these situations choosing carefully between tradeoffs is very important for client satisfaction and quality.
+        </p>
+      </div>
+      <h2>Metaballs</h2>
+      <div class="sectiontext">
+        <p>
+          After deciding on the rendering method, I had to come up with a way to render the borders themselves. The most common way to merge together circles and spheres in a smooth fashion is metaballs. These metaballs in our case will fill the borders with a color, and draw an outline of the metaballs as the border.
+          <br>
+          <br>
+          The challenge: rendering a few metaballs is a walk in the park for our graphics card, but when that number increases the rendering times increase very quickly, making rendering 100s and 1000s of them very difficult. 
+          <br>
+          <br>
+          Metaballs are essentially evaluating a curve function for each ball and combining all the results with a commutative algorithm in each pixel we wish to rasterize. To get that sharp look a step function or a gradient evaluation is often used over the pixel values to get the final result. Since we do all of this for each pixel, we have to evaluate all metaballs in every pixel. Or do we...
+        </p>
+      </div>
+
+      <div class="centeringdiv">
+        <div class="flex-horizontal">
+          <div class="project-image-container">
+            <video src="./metaballs.mp4" class="project-image" style="z-index: 100;" controls></video>
+            <p class="image-caption">
+              Metaballs replicated in an image editor with contrast as a sharpening function
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sectiontext">
+        <p>
+          Since not every metaball is covering the whole screen, we should be able to define a maximum radius in which a ball has influence. To do this, we have to choose a function which not only approaches 0 but actually reaches it, and does so at our pre-defined maximum radius. The most common metaball function is 1/x, which unfortunately does not reach 0, so we have to come up with something ourselves.
+        </p>
+      </div>
+
+      <div class="centeringdiv">
+          <div class="project-image-container">
+            <iframe src="https://www.desmos.com/calculator/umib5gnfqw" class="project-graph"></iframe>
+            <p class="image-caption">
+              Most simple metaball function: 1/d
+            </p>
+          </div>
+          <div class="project-image-container">
+            <iframe src="https://www.desmos.com/3d/0345306108" class="project-graph"></iframe>
+            <p class="image-caption">
+              3D representation of 2D 1/d 
+            </p>
+          </div>
+      </div>
+      
+      <div class="sectiontext">
+        <p>
+          I chose the following formula to use: [m = (1 - min(1, d * 0.5s - 4/s ))^b where m is final metaball influence, d is distance from current pixel to the metaball's center, b is how smoothly metaballs are blended, and s is size of the metaball]
+          which works wonders for this usecase, and still produces a smoothened look.
+        </p>
+      </div>
+
+      <div class="centeringdiv">
+        <div class="project-image-container">
+          <iframe src="https://www.desmos.com/calculator/iv8es2bfub" class="project-graph"></iframe>
+          <p class="image-caption">
+            Interactable demo of custom formula
+          </p>
+        </div>
+    </div>
+
+    <div class="sectiontext">
+      <p>
+        After I calculate the formula I just sum all the metaballs in the specific empire. Metaballs belonging to other empires are also summed and later subtracted from the influence. This results in empires repelling other empire borders, thus respecting each other's territories and not overlapping.
+        <br>
+        <br>
+        Since we now have a limited function, we can start to divide the space into a grid, and store only a limited amount of metaballs in each grid cell. This way for each pixel we only have to evaluate the metaballs that reside in the specific grid cell of the pixel, and are likely to influence the final pixel color.
+        <br>
+        <br>
+        Note, that this optimization method only works well where only a few number of metaballs are likely to overlap.
+      </p>
+    </div>
+
+    <div class="centeringdiv">
+      <div class="flex-horizontal">
+        <div class="project-image-container">
+          <img src="./metaballgrid.png" class="project-image">
+          <p class="image-caption">
+            Debug view of galaxy metaball grid, whiter cell = more metaballs in cell
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <h2>Gathering data for shader</h2>
+    <div class="sectiontext">
+      <p>
+        To actually send the grid data to the shader I used a Texture2D to store the star count of a cell and Texture2DArray for storing the star IDs that reside in the cell. I used a separate look-up Texture2D for storing data about each star, this is referenced by the star ID.
+        <br>
+        <br>
+        Since writing all of this data into the textures is a lot of work for the CPU, I converted these methods to run in BurstCompiled jobs.
+      </p>
+    </div>
+
+    <h2>Fog of war</h2>
+    <div class="sectiontext">
+      <p>
+        Fog of war is done in a very similar way to the borders, metaballs are used to render the clouds, additionally with an animated distortion effect.
+
+        The fog metaballs are also rendered into a RenderTexture using a compute shader, this is then used as a mask for the territories. No peaking behind the fog! ;)
+      </p>
+    </div>
+
+    <div class="centeringdiv">
+      <div class="flex-horizontal">
+        <div class="project-image-container">
+          <img src="./fogofwar.png" class="project-image">
+          <p class="image-caption">
+            Fog of war hiding unexplored star systems
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Ambience effect</h2>
+    <div class="sectiontext">
+      <p>
+        Lastly, we wanted to make the borders look unique, so I added some ambience effects to it using Unity's shuriken particle system and a secondary camera. The particle system is drawn into a RenderTexture which is fed into the territory border renderers. The border shader uses this to add some extra texture to the territory.
+      </p>
+    </div>
+
       </div>
     </div>
     <script type="module" src="/src/projects/main.ts"></script>
