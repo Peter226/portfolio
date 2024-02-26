@@ -135,3 +135,9 @@ li{
   border-radius: 10px;
   filter: invert(1);
 }
+
+@media (min-width:600px) and (orientation: portrait) {
+  .project-image{
+    height: 380px;
+  }
+}
