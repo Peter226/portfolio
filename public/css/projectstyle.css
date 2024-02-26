@@ -102,7 +102,7 @@ li{
 }
 
 .project-image{
-  height: 280px;
+  height: 340px;
   border-radius: 10px;
 }
 
@@ -130,7 +130,7 @@ li{
 }
 
 .project-graph{
-  height: 280px;
+  height: 340px;
   width: 80vw;
   border-radius: 10px;
   filter: invert(1);
