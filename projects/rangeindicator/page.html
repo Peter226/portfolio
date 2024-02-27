@@ -17,15 +17,34 @@
         <h1>Tower Defense Turret Range Indicator</h1>
         <div class="sectiontext">
           <p>
-            This page is [Work In Progress]
+            In this project I was tasked with creating a range indicator graphic for turrets in a tower defense game, called Forward Defense. You may check out my work in action and support the developers by purchasing the game on Steam:
           </p>
         </div>
         <div class="centeringdiv">
-          <iframe src="https://store.steampowered.com/widget/1986940/" frameborder="0" width="646" height="190"></iframe>
+          <iframe src="https://store.steampowered.com/widget/1986940/" frameborder="0"  width="646" height="190"></iframe>
+        </div>
+        <div class="sectiontext">
+          <p>
+            Since the game already featured a similar graphic used for indicating valid areas to place turrets in, the style of the effect was already given. Other things to consider were layers on which the effect is projected onto, like terrain, and other layers such as buildings, which the effect ignores. The effect also needed to be able to show a variable number of turrets from 10s to 100s at any density.
+            <br>
+            <br>
+            Considering all of these requirements I opted to use projectors, since they already have a layer system and are able to follow the curves of the map such as hills and riverbeds. The projector uses a custom shader, which processes a range map according to supplied material colors, and applies a simple 4-tap border. The range map is rendered in a similar fashion to how Unity renders shadows, the turrets render their ranges into a top-down camera. The challenge here is that if we render the whole map into a single texture, zoomed-in areas will look pixelated due to fixed RenderTexture resolution. To fix this I minimize the area which is rendered into this texture, I only render the area which is visible to the main camera. The top-down camera frustum is approximated using raycasts, as mountains make it impossible to calculate an exact size in a reasonable amount of compute time. I also apply a small margin of error.
+            <br>
+            <br>
+            The end result of this system is merged, perfectly sharp turret range outlines at any zoom level, and at a low cost to performance.
+          </p>
         </div>
 
-
-        
+        <div class="centeringdiv">
+          <div class="flex-horizontal">
+            <div class="project-image-container">
+              <img src="./preview.png" class="project-image">
+              <p class="image-caption">
+                Final graphic
+              </p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
