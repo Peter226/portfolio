@@ -10,6 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         territoryborders: resolve(__dirname, 'projects/territoryborders/page.html'),
         rangeindicator: resolve(__dirname, 'projects/rangeindicator/page.html'),
+        fliight: resolve(__dirname, 'projects/fliight/page.html'),
         huehades: resolve(__dirname, 'projects/huehades/page.html'),
         paradise: resolve(__dirname, 'projects/paradise/page.html'),
         timebooker: resolve(__dirname, 'projects/timebooker/page.html'),
