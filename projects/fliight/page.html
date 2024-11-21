@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Range Indicator</title>
+    <link rel="icon" href="../../img/favicon.ico"><!--icon made with Magneto font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/projectstyle.css">
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <link rel="stylesheet" href="../../css/copyright.css">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="section">
+        <h1>Fliight VR App & Desktop Client</h1>
+        <div class="sectiontext">
+          <p>
+            I was commissioned to create a VR application for <a href="https://fliight.com.au/">Fliight Technologies</a>, capable of streaming video from a network source and streaming back user input to the desktop client.
+            <br>
+            <br>
+            The VR app was made with Unity 2022.3 using the OpenXR libraries, and the OpenXR Meta extension to ensure <a href="https://www.meta.com/quest/products/quest-2/">Quest 2</a> and <a href="https://www.meta.com/quest/quest-3/">Quest 3</a> compatibility for the target devices.
+          </p>
+        </div>
+        <div class="centeringdiv">
+            <div class="flex-horizontal">
+              <div class="project-image-container">
+                <video muted loop controls autoplay src="./showcase1.mp4" class="project-image"></video>
+                <p class="image-caption">
+                  3D environment, passthrough, video streaming
+                </p>
+              </div>
+              <div class="project-image-container">
+                <video muted loop controls autoplay src="./showcase2.mp4" class="project-image"></video>
+                <p class="image-caption">
+                  Web browser, panel resizing
+                </p>
+              </div>
+              <div class="project-image-container">
+                <video muted loop controls autoplay src="./showcase3.mp4" class="project-image"></video>
+                <p class="image-caption">
+                  Desktop client, controller streaming
+                </p>
+              </div>
+            </div>
+          </div>
+        <div class="sectiontext">
+          <p>
+            The purpose of the application is to serve as an <a href="https://en.wikipedia.org/wiki/First-person_view_(radio_control)">FPV</a> alternative for controlling drones and planning flight paths.
+          </p>
+            <br>
+            <p>
+            To achieve this I had to implement the following features:
+          </p>
+            <ul>
+              <li> - Video streaming through an RTSP protocol, works with both local network and online streams. The video player uses the <a href="https://www.videolan.org/vlc/libvlc.html">libVLC</a> library to ensure a wide range of compatibility with different streaming protocols.</li>
+              <li> - Configuration panel to handle connection settings.</li>
+              <li> - Joystick controller input streaming back to a desktop client on a separate computer. The client was implemented in <a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-9.0">WPF</a> and uses <a href="https://github.com/nefarius/ViGEmBus">ViGEmBus</a> to emulate an Xbox360 controller. The streaming and connection protocol for user input is custom made, and is focused on low-latency.</li>
+              <li> - Web browser window to view websites and use google maps. Multiple browser windows can be opened at a time for maximum productivity.</li>
+              <li> - A custom 3D panel manipulator for grabbing and resizing the browser and video stream panels.</li>
+            </ul>
+            <br>
+            <p>
+            Most 2D Textures, 3D models and sound effects are licensed from third-party vendors, or are provided by <a href="https://fliight.com.au/">Fliight Technologies</a>.
+          </p>
+        </div>
+
+        <div class="centeringdiv">
+          <div class="flex-horizontal">
+            <div class="project-image-container">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7191393406013603840?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              <p class="image-caption">
+                Check out <a href="https://www.linkedin.com/posts/fliight_drone-empower-sme-activity-7191394099629858816-otJB?utm_source=share&utm_medium=member_desktop">this LinkedIn post</a> from Fliight Technologies
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="copyrightsymbol">©</div>
+        <div class="copyrighttext"> 2023 <script>
+        let currentYear = new Date().getFullYear();
+      if(currentYear != 2023) document.write( "- " + currentYear); 
+      </script> Péter Csaba Panyik | All Rights Reserved
+      </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/projects/main.ts"></script>
+  </body>
+</html>

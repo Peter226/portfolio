@@ -88,6 +88,8 @@ h1{
   flex-wrap: wrap;
   align-items: flex-start;
   overflow: hidden;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 p{
@@ -124,7 +126,7 @@ li{
   display: flex;
   flex-direction: row;
   align-items: inherit;
-  justify-content: inherit;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
