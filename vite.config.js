@@ -19,7 +19,6 @@ export default defineConfig({
         gameoflife: resolve(__dirname, 'projects/gameoflife/page.html'),
         survival: resolve(__dirname, 'projects/survival/page.html'),
         fps: resolve(__dirname, 'projects/fps/page.html'),
-        cv: resolve(__dirname, 'cv/cv.pdf'),
       },
     },
   },
