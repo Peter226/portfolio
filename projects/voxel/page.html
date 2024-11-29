@@ -17,10 +17,35 @@
         <h1>Fast & Smooth Voxel Terrain</h1>
         <div class="sectiontext">
           <p>
-            This page is [Work In Progress]
+            This page is [Work In Progress], meanwhile please take a look at the preview video below. This system features a procedurally generated infinite terrain with kilometres of view distance, utilizing a LOD chain. Multiple "Dimensions" are supported, which are essentially different worlds loaded in at the same time, similar to how <a href="https://www.minecraft.net/">Minecraft</a> handles the Nether and the Overworld.
+            <br>
+            <br>
+            The current generation algorithm is pretty basic, but anything imaginable can be generated. A graph-based generator is in the works, which will allow for a user-friendly creation of terrain generators.
+            <br>
+            <br>
+            Terrain editing is done through the use of Stencils, which are serializable objects that can be passed through networking or saved to disk if needed, allowing on-demand terrain editing, which in turn allows for all terrain LOD levels to be edited (editing terrain kilometres away). Full multiplayer compatibility is planned.
           </p>
         </div>
+
+        <div class="centeringdiv">
+          <div class="flex-horizontal">
+            <div class="project-image-container">
+              <video muted loop controls autoplay src="./voxel_showcase.mp4" class="project-image"></video>
+              <p class="image-caption">
+                Massive, infinitely generated, fully editable terrain
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sectiontext">
+          <p>
+            Currently 32 thousand types of materials are supported, with planned support for material meta-data. All voxel data is compressed with a custom compression algorithm to maximize efficiency, inspired by <a href="https://qoiformat.org/">QOI<a>.
+          </p>
+        </div>
+
       </div>
+
     </div>
     <script type="module" src="/src/projects/main.ts"></script>
   </body>
